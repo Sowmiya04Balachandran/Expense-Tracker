@@ -70,3 +70,23 @@
     background-color: transparent;
     color: #ae82cc;
   }
+ /* Add this CSS to style the password input container */
+.passwordInput {
+  position: relative;
+}
+
+/* Add this CSS to style the eye icon */
+.eyeIcon {
+  width: 20px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  position: absolute;
+  right: 10px; /* Adjust the right position as needed */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%);
+}
+
+/* Optionally, you can add hover effects for the eye icon */
+.eyeIcon:hover {
+  opacity: 0.7; /* Adjust opacity on hover */
+}

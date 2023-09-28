@@ -3,7 +3,7 @@ import { createContext } from "react";
 const AuthContext=createContext({
     token:null,
     isLoggedin:false,
-    login:()=>{},
+    login:(token)=>{},
     logout:()=>{},
 })
 export default AuthContext;
