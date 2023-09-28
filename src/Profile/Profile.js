@@ -20,7 +20,7 @@ const Profile = () => {
     const token = authCtx.token;
 
     try {
-      const response = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyCgl1Kkkaw7_gJny8ISnqxhFean3l_05B8', {
+        const response = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyCgl1Kkkaw7_gJny8ISnqxhFean3l_05B8', {
         method: 'POST',
         body: JSON.stringify({
           idToken: token,
