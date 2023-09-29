@@ -1,19 +1,35 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+// // src/utils/api.js
+// import firebase from 'firebase/app';
+// import 'firebase/firestore';
 
+// export async function fetchUserProfile(userId) {
+//   try {
+//     const userProfileRef = firebase.firestore().collection('userProfiles').doc(userId);
+//     const userProfileSnapshot = await userProfileRef.get();
+
+//     if (userProfileSnapshot.exists) {
+//       return userProfileSnapshot.data();
+//     }
+
+//     return null; // User profile not found
+//   } catch (error) {
+//     console.error('Error fetching user profile:', error);
+//     throw error;
+//   }
+// }
+import React from 'react'
+import MainNavigation from '../MainNavigation';
+import Login from '../Login/Login';
 const Home = () => {
-  const [isProfileIncomplete, setIsProfileIncomplete] = useState(true); // Set to true if the profile is incomplete
+    return (
+        <div>
+            <MainNavigation />
+            <Login />
+        </div>
 
-  return (
-    <div>
-      <h1>Welcome to Expense Tracker</h1>
-      {isProfileIncomplete ? (
-        <p>Your profile is incomplete. Please <Link to="/profile">complete your profile</Link>.</p>
-      ) : (
-        <p>Welcome to Expense Tracker! Your profile is complete.</p>
-      )}
-    </div>
-  );
-};
 
-export default Home;
+
+    )
+}
+
+export default Home

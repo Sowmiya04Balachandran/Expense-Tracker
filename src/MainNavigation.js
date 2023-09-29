@@ -1,18 +1,34 @@
-import { NavLink } from "react-router-dom";
-import classes from './MainNavigation.module.css';
+import React, { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import AuthContext from './store/AuthContext';
 
-const MainNavigation=()=>{
-    return(
-        <header className={classes.header}>
-            <ul>
-                <li>
-                    <NavLink to='/'>Home</NavLink>
-                </li>
-                <li>
-                    <NavLink to='/Login'>Login</NavLink>
-                </li>
-            </ul>
-        </header>
-    )
-}
+const MainNavigation = () => {
+  const navigate = useNavigate();
+  const authCtx = useContext(AuthContext);
+
+  const logoutHandler = () => {
+    authCtx.logout();
+    navigate('/');
+  };
+
+  return (
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/products">Products</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+        </ul>
+      </nav>
+      <button onClick={logoutHandler}>Logout</button>
+    </header>
+  );
+};
+
 export default MainNavigation;
