@@ -208,6 +208,7 @@ const Login = () => {
       })
       .then((data) => {
         authCtx.login(data.idToken);
+        //authCtx.setIsLoggedIn(true);
         navigate('/updateprofile'); // Redirect to UpdateProfile
       })
       .catch((err) => {
