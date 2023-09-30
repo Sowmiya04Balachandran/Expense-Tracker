@@ -147,6 +147,8 @@
 import React, { useState, useRef, useContext } from 'react';
 import AuthContext from '../store/AuthContext.js';
 import { useNavigate } from 'react-router-dom';
+import styles from './Login.module.css';
+
 
 const Login = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -219,7 +221,7 @@ const Login = () => {
 
   return (
     <div>
-      <section className="auth">
+      <section className={styles.auth}>
         <h1>{isLogin ? 'Login' : 'Sign Up'}</h1>
         <form onSubmit={submitHandler}>
           <div className="control">

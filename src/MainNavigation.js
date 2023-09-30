@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import AuthContext from './store/AuthContext';
+import classes from './MainNavigation.module.css'
 
 const MainNavigation = () => {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ const MainNavigation = () => {
   };
 
   return (
-    <header>
+    <header className={classes.header}>
       <nav>
         <ul>
           <li>
