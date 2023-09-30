@@ -31,6 +31,7 @@ import AuthContextProvider from './store/AuthContextProvider.js';
 import UpdateProfile from './UpdateDetail/UpdateDetail';
 import Profile from './Profile/Profile';
 import Login from './Login/Login';
+import ForgotPassword from './Login/ForgotPassword';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
           <Route path="/Login" element={<Login/>}/>
           <Route path="/updateprofile" element={<UpdateProfile />} />
           <Route path="/completeprofile" element={<Profile />} />
+          <Route path="/forgotpassword" element={<ForgotPassword/>}/>
         </Routes>
       </Router>
     </AuthContextProvider>
