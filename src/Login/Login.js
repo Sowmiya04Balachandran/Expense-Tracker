@@ -65,7 +65,7 @@ const Login = () => {
       .then((data) => {
         authCtx.login(data.idToken);
         //authCtx.setIsLoggedIn(true);
-        navigate('/updateprofile'); // Redirect to UpdateProfile
+        navigate('/Expenses'); // Redirect to UpdateProfile
       })
       .catch((err) => {
         alert(err.message);
