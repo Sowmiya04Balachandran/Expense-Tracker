@@ -11,6 +11,7 @@ import ForgotPassword from './Login/ForgotPassword';
 import Expenses from './Expenses/Expenses';
 import { Provider } from 'react-redux';
 import store from './store/index';
+
 //import PremiumButton from './Expenses/PremiumButton';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/completeprofile" element={<Profile />} />
           <Route path="/forgotpassword" element={<ForgotPassword/>}/>
           <Route path='/Expenses' element={<Expenses/>}/>
+        
         </Routes>
         
       </Router>

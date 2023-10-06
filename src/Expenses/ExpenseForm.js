@@ -442,6 +442,7 @@ import Premium from './Premium';
 import { useSelector, useDispatch } from 'react-redux';
 import { expenseAction } from '../store/expensesSlice';
 import axios from 'axios';
+//import { premiumActions } from '../store/PremiumSlice';
 
 const ExpensesForm = () => {
   const isAuth = useSelector(state => state.auth);
@@ -455,6 +456,12 @@ const ExpensesForm = () => {
   const handleCategorySelect = (category) => {
     setCategory(category);
   }
+  
+ //const isPremium=useSelector((state)=>state.premium.isPremium)
+
+  // const upgradePremium=()=>{
+  //   dispatch(premiumActions.setPremium())
+  // }
 
   const [expenseList, setExpenseList] = useState([]);
   let totalAmount = 0;
@@ -687,7 +694,7 @@ const ExpensesForm = () => {
         </ul>
         <span>Total Expense:{totalAmount}</span>
       </div>
-      {totalAmount >= 10000 && (<Premium />)}
+      {totalAmount >= 10000  && <Premium />}
       <button onClick={handleExportCSV}>Download Expenses</button>
     </div>
   );
